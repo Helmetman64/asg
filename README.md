@@ -1,1 +1,1 @@
-CHANGED README FILE
+Landing website for Alishas Secret Garden built with NextJS and Supabase
