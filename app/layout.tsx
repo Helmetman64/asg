@@ -20,11 +20,12 @@ export const HeaderColorContext = createContext<{
   setHeaderColor: () => {},
 });
 
+// This is your Root Layout Component
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   const [headerColor, setHeaderColor] = useState<string>("");
 
   return (
