@@ -1,0 +1,259 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+main {
+  top: 0;
+  position: relative;
+  background-color: #ffecc4;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100%;
+  scroll-snap-type: y mandatory;
+  scroll-margin-top: 150px;
+}
+
+.section {
+  scroll-snap-align: start;
+}
+
+.section:not(.about-us-section) {
+  min-height: 100vh;
+}
+
+.landing-section, .order-section, .about-us-section {
+  background-color: #ffecc4;
+}
+
+.items-section, .socials-section {
+  background-color: #f9da80;
+}
+
+.photo-text {
+  position: absolute;
+  font-size: xx-large;
+  z-index: 100;
+}
+/* LANDING SECTION */
+.landing-section {
+  padding-top: 150px;
+}
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.landing-image {
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border-radius: 26px;
+  opacity: 0.4;
+}
+
+.title-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: xx-large;
+}
+
+/* ITEMS SECTION */
+
+
+.items-div {
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  position: relative;
+}
+
+.item-photo-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.photo-wrapper {
+  position: relative; /* Allows the text to be positioned absolutely within this wrapper */
+  margin: 20px; /* Add margin for spacing between items */
+  cursor: pointer;
+  transform: translateY(0);
+  transition: all 0.5s linear;
+}
+
+.photo-wrapper:hover {
+  transform: translateY(-0.5rem);
+}
+
+.item-photo {
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.8;
+  transform: translateY(0);
+  transition: all 0.5s linear;
+}
+
+.item-photo:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.item-text {
+  bottom: 10%; /* Position the text at the bottom of the image */
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  color: white; /* Change color for better visibility */
+  font-size: 1.5rem; /* Adjust font size */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Optional: add text shadow for better contrast */
+  text-align: center; /* Center align text */
+}
+
+.view-items-btn-wrapper {
+  margin-top: 100px;
+  display: grid;
+  justify-content: center;
+}
+
+.view-items-btn {
+  transform: translateY(0);
+  transition: all 0.5s linear;
+}
+
+.view-items-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transform: translateY(-0.5rem);
+}
+
+@media (max-width: 768px) {
+  .photo-text {
+    font-size: 1.2rem; /* Reduce font size on smaller screens */
+  }
+}
+
+/* ORDER SECTION */
+.order-div {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.steps-container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.order-section h1{
+  padding-top: 100px;
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.box {
+  width: 264px;
+  height: 309px;
+  background-color: #f3bf18 ;
+  border-radius: 26px;
+}
+
+.box h3{
+  text-align: center;
+  margin-top: 5px;
+}
+
+.box p{
+  margin-left: 10px;
+  text-wrap: wrap;
+}
+
+.arrow {
+  height: 100px;
+  width: 100px;
+  align-self: center;
+}
+
+/* SOCAILS SECTION */
+.socials-section h1{
+  padding-top: 100px;
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.socials-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.socials-photo-wrapper {
+  width: 445px;
+  height: 269px;
+  border-radius: 26px;
+  border: 1px solid;
+}
+
+/* ABOUT US SECTION */
+
+.about-us-section {
+  height: 50vh;
+}
+
+.about-us-section h1{
+  padding-top: 100px;
+  text-align: center;
+  font-size: xxx-large;
+}
+
+/* PRODUCTS PAGE */
+
+.products-container, .flowers-container, .plushies-container, .keychains-container{
+  text-align: center;
+  padding-top: 150px;
+  width: 100%;
+  height: 100%;
+}
+
+.product-card {
+  width: 100%; /* Ensures card takes full available width */
+  max-width: 300px; /* Optional: max width for each card */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexible column layout */
+  grid-gap: 20px; /* Space between cards */
+  justify-items: center; /* Center items horizontally */
+}
+
+
+/* MODAL */
+.modal-container {
+  display: flex;
+}
+
+.image-placeholder {
+  height: 200px;
+  width: 150px;
+  border: black solid;
+}
+
+.modal-item-info {
+  display: block;
+  padding-left: 100px;
+  margin: 0;
+}
