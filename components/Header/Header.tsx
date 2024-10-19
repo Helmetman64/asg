@@ -7,12 +7,12 @@ import styles from "./Header.module.css";
 import Link from "next/link";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { useContext } from "react";
+import { HeaderColorContext } from "../../app/theme-provider";
 
-interface HeaderProps {
-  backgroundColor: string;
-}
+const Header: React.FC = () => {
+  const { headerColor } = useContext(HeaderColorContext);
 
-const Header: React.FC<HeaderProps> = ({ backgroundColor }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ backgroundColor }) => {
   return (
     <header
       className={styles.header}
-      style={{ "--header-bg-color": backgroundColor } as React.CSSProperties}
+      style={{ "--header-bg-color": headerColor } as React.CSSProperties}
     >
       <div className={styles.container}>
         <nav className={styles.navbar}>

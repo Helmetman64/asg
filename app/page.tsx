@@ -2,7 +2,7 @@
 
 import { useEffect, useContext } from "react";
 import Image from "next/image";
-import { HeaderColorContext } from "./layout";
+import { HeaderColorContext } from "./theme-provider";
 import stock from "../public/stock1.jpg";
 import flowers from "../public/flower-stock.jpeg";
 import plushies from "../public/plushies-stock.jpeg";
