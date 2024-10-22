@@ -64,7 +64,7 @@
   background-color: #f3bf18;
   color: white;
   transition: left 0.3s ease-in-out; /* Sliding transition */
-  z-index: 100; /* Ensure it's on top */
+  z-index: 200; /* Ensure it's on top */
   padding-top: 100px; /* Space for the header */
 }
 
@@ -117,12 +117,23 @@
 
 
 .navIcons {
+  /* padding-top: 150px; */
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(6,1fr);
+  grid-template-rows: min-content 3fr min-content;
 }
 
 .icon {
   color: black;
   height: 22px;
   width: 22px;
+}
+
+/* MOBILE RESPONSIVE CSS */
+
+@media (max-width: 901px) {
+  .sideMenu {
+    width: 100%;
+  }
 }

@@ -97,26 +97,26 @@ const Header: React.FC = () => {
             </Link>
           </li>
         </ul>
-        <ul className={styles.navIcons}>
-          <li className={styles.navItem}>
+        <div className={styles.navIcons}>
+          <div className={styles.navItem}>
             <Link href="https://www.instagram.com/alishassecretgarden/">
               <FaInstagram className={styles.icon} />
             </Link>
-          </li>
-          <li className={styles.navItem}>
+          </div>
+          <div className={styles.navItem}>
             <Link
               href="https://www.tiktok.com/@alishassecretgarden"
               onClick={closeMenu}
             >
               <FaTiktok className={styles.icon} />
             </Link>
-          </li>
-          <li className={styles.navItem}>
+          </div>
+          <div className={styles.navItem}>
             <Link href="/" onClick={closeMenu}>
               <MdEmail className={styles.icon} />
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </header>
   );
